@@ -8,14 +8,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Call action to install dependencies
-        uses: ./.github/actions/deps-install
+        uses: ./actions/deps-install
       - name: Lint code
         run: npm run lint
   test:
     runs-on: ubuntu-latest
     steps:
       - name: Call action to install dependencies
-        uses: ./.github/actions/deps-install
+        uses: ./actions/deps-install
       - name: Test code
         id: run-tests
         run: npm run test
@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Call action to install dependencies
-        uses: ./.github/actions/deps-install
+        uses: ./actions/deps-install
       - name: Build website
         run: npm run build
       - name: Upload artifacts
