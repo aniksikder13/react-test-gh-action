@@ -4,8 +4,6 @@ description: Installs project dependencies and caches them for future runs.
 runs:
   using: "composite"
   steps:
-    - name: Get code
-      uses: actions/checkout@v4
     - name: Cache dependencies
       id: cache
       uses: actions/cache@v4
