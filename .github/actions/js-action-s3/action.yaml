@@ -1,0 +1,6 @@
+name: s3 Upload bucket
+description: Upload files to an S3 bucket.  
+runs:
+  using: 'node24'
+  main: './main.js'
+  

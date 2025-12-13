@@ -59,3 +59,12 @@ jobs:
         run: ls
       - name: Deploy site
         run: echo "Deploying..."
+  informations:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v4
+      - name: Call action to upload s3
+        uses: ./.github/actions/js-action-s3
+
+  
