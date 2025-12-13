@@ -1,6 +1,16 @@
 name: s3 Upload bucket
 description: Upload files to an S3 bucket.  
+inputs:
+  bucket-name:
+    description: 'The name of the S3 bucket to upload to'
+    required: true
+  source-dir:
+    description: 'The directory containing files to upload'
+    required: true
+  bucket-region:
+    description: 'The AWS region where the S3 bucket is located'
+    required: false
+    default: 'us-east-1'
 runs:
   using: 'node24'
   main: './main.js'
-  
