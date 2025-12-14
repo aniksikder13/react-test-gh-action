@@ -12,7 +12,7 @@ pipeline {
             steps {
                 checkout scm
                 echo 'Installing dependencies...'
-                sh 'npm ci'
+                sh 'npm install'
                 echo 'Running tests...'
                 script {
                     try {
@@ -29,7 +29,7 @@ pipeline {
             steps {
                 checkout scm
                 echo 'Installing dependencies...'
-                sh 'npm ci'
+                sh 'npm install'
                 echo 'Building website...'
                 sh 'npm run build'
             }
